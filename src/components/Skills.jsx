@@ -5,17 +5,17 @@ const skills = [
   {
     title: 'Frontend',
     icon: CodeBracketIcon,
-    items: ['React', 'Tailwind CSS', 'Headless UI', 'Heroicons'],
+    items: ['React', 'Flutter', 'Tailwind'],
   },
   {
     title: 'Backend',
     icon: CircleStackIcon,
-    items: ['Node.js', 'Express', 'MongoDB', 'REST API'],
+    items: ['Node.js', 'Django', 'MySQL', 'REST API', 'Spring Boot'],
   },
   {
     title: 'Design',
     icon: PaintBrushIcon,
-    items: ['Figma', 'UI/UX', 'Responsive Design'],
+    items: ['Figma', 'UI/UX', 'Responsive Design']
   },
 ];
 

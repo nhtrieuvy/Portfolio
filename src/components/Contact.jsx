@@ -6,6 +6,7 @@ export default function Contact() {
   const { t } = useTranslation();
   const formRef = useRef(null);
   const [status, setStatus] = useState('');
+  const autoReplyTemplate = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID || '';
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -18,6 +19,26 @@ export default function Contact() {
         formRef.current,
         { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       );
+      // If an autoreply template is provided, send a confirmation email to the sender
+      if (autoReplyTemplate) {
+        try {
+          const fd = new FormData(formRef.current);
+          const data = {
+            user_name: fd.get('user_name'),
+            user_email: fd.get('user_email'),
+            message: fd.get('message'),
+          };
+          await emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            autoReplyTemplate,
+            data,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          );
+        } catch (err) {
+          // don't block main flow if auto-reply fails
+          console.error('Auto-reply failed', err);
+        }
+      }
       setStatus('success');
       formRef.current.reset();
     } catch {

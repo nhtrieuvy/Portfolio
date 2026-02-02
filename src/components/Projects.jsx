@@ -4,19 +4,28 @@ import { useTranslation } from 'react-i18next';
 const projects = [
   {
     title: 'Portfolio Website',
-    description: 'Modern portfolio with dark mode, i18n, and animations.',
-    tech: ['React', 'Tailwind', 'Headless UI'],
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop',
-    demo: 'https://example.com',
-    github: 'https://github.com/example',
+    description: 'Persional portfolio showcasing my projects, skills, and journey.',
+    tech: ['ReactJS', 'Tailwind', 'Headless UI'],
+    image: 'public/image_portfolio.png',
+    demo: 'https://nhtrieuvy.github.io/Portfolio/',
+    github: 'https://github.com/nhtrieuvy/Portfolio',
   },
   {
-    title: 'E-commerce UI',
-    description: 'Responsive storefront with product listing and cart.',
-    tech: ['React', 'Tailwind'],
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop',
-    demo: 'https://example.com',
-    github: 'https://github.com/example',
+    title: 'PlanPalApp',
+    description: 'A collaborative travel planning app with real-time chat, activity management, and map integration.',
+    tech: ['Flutter', 'Django', 'Firebase', 'WebSocket', 'MySQL'],
+    image: 'public/image_planpal.jpg',
+    demo: 'https://github.com/nhtrieuvy/PlanPalApp/releases/tag/v1.0.0',
+    isApp: true,
+    github: 'https://github.com/nhtrieuvy/PlanPalApp',
+  },
+  {
+    title: 'E-commerce Website',
+    description: 'A full-stack E-commerce platform — backend powered by Spring Boot and frontend built with React + MUI.',
+    tech: ['ReactJS', 'MUI', 'Spring Boot', 'MySQL'],
+    image: 'public/image_ecommerce.png',
+    demo: 'https://spring-ecommerce-app.vercel.app/',
+    github: 'https://github.com/nhtrieuvy/SpringEcommerceApp',
   },
 ];
 
@@ -52,7 +61,7 @@ export default function Projects() {
                 <div className="flex gap-4">
                   <a href={p.demo} className="inline-flex items-center gap-2 text-primary-600 hover:underline">
                     <ArrowTopRightOnSquareIcon className="h-5 w-5" />
-                    {t('projects.demo')}
+                    {p.isApp ? t('projects.download') : t('projects.demo')}
                   </a>
                   <a href={p.github} className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:underline">
                     <CodeBracketIcon className="h-5 w-5" />
