@@ -13,6 +13,7 @@ export default function Header() {
     { name: t('nav.home'), href: '#home' },
     { name: t('nav.skills'), href: '#skills' },
     { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.certificates'), href: '#certificates' },
     { name: t('nav.about'), href: '#about' },
     { name: t('nav.contact'), href: '#contact' },
   ];

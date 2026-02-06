@@ -13,6 +13,7 @@ const resources = {
         home: 'Home',
         skills: 'Skills',
         projects: 'Projects',
+        certificates: 'Certificates',
         about: 'About',
         contact: 'Contact',
       },
@@ -34,6 +35,10 @@ const resources = {
         demo: 'Live Demo',
         download: 'Download App',
         github: 'GitHub',
+      },
+      certificates: {
+        title: 'Certificates',
+        subtitle: 'Professional courses and certifications I have completed.',
       },
       about: {
         title: 'About Me',
@@ -63,6 +68,7 @@ const resources = {
         home: 'Trang chủ',
         skills: 'Kỹ năng',
         projects: 'Dự án',
+        certificates: 'Chứng chỉ',
         about: 'Giới thiệu',
         contact: 'Liên hệ',
       },
@@ -84,6 +90,10 @@ const resources = {
         demo: 'Xem demo',
         download: 'Tải Ứng Dụng',
         github: 'GitHub',
+      },
+      certificates: {
+        title: 'Chứng chỉ',
+        subtitle: 'Các khóa học và chứng chỉ tôi đã hoàn thành.',
       },
       about: {
         title: 'Về tôi',
