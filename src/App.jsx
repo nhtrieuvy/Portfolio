@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Certificates from './components/Certificates';
 import About from './components/About';
 import Contact from './components/Contact';
 import SectionReveal from './components/SectionReveal';
@@ -25,6 +26,10 @@ function App() {
 
           <SectionReveal id="projects">
             <Projects />
+          </SectionReveal>
+
+          <SectionReveal id="certificates" className="bg-gray-50 dark:bg-gray-800">
+            <Certificates />
           </SectionReveal>
 
           <SectionReveal id="about" className="bg-gray-50 dark:bg-gray-800">
